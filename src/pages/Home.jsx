@@ -1,7 +1,11 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
+
 import princetonLogo from "./images/princetonLogo.png";
 import bnuLogo from "./images/bnuLogo.png";
-import { Link } from "react-router-dom";
+import gatesLogo from "./images/gatesLogo.png";
+import linkedinLogo from "./images/linkedinLogo.png";
+import instaLogo from "./images/instaLogo.png";
 
 export default function Home() {
   return (
@@ -13,15 +17,26 @@ export default function Home() {
       <div className='header-container'>
         <h1><b>Projects</b></h1>
       </div>
+      
       <div className='header-container'>
         <h1><b>Affiliations</b></h1>
-        <img src={princetonLogo}></img>
-        <img src={bnuLogo}></img>
+        <div className='affil-container'>
+          <img src={princetonLogo} className='affil' alt="Princeton Logo"/>
+          <img src={bnuLogo} className='affil' alt="Beijing Normal University Logo"/>
+          <img src={gatesLogo} className='affil-wide' alt="Gates Scholarship Logo"/>
+        </div>
       </div>
+      
       <div className='header-container'>
         <h1><b>Socials</b></h1>
-        <Link to="https://www.linkedin.com/in/jack-kelly-391696259/">LinkedIn</Link>
-        <Link to="https://www.instagram.com/jackmkelly519/">Instagram</Link>
+        <div className='socials-container'>
+          <a href="https://www.linkedin.com/in/jack-kelly-391696259/" target="_blank" rel="noopener noreferrer">
+            <img src={linkedinLogo} alt="LinkedIn" className="social-logo"/>
+          </a>
+          <a href="https://www.instagram.com/jackmkelly519/" target="_blank" rel="noopener noreferrer">
+            <img src={instaLogo} alt="Instagram" className="social-logo"/>
+          </a>
+        </div>
       </div>
     </>
   );

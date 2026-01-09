@@ -1,13 +1,17 @@
 import "./Home.css";
 import { useEffect, useRef } from "react";
+import confetti from "canvas-confetti";
 
+import tigerlinkLogo from "./images/tigerlinkLogo.png";
 import princetonLogo from "./images/princetonLogo.png";
 import bnuLogo from "./images/bnuLogo.png";
 import gatesLogo from "./images/gatesLogo.png";
 import linkedinLogo from "./images/linkedinLogo.png";
 import instaLogo from "./images/instaLogo.png";
 
+
 export default function Home() {
+  // for section entering animations
   const sectionsRef = useRef([]);
 
   useEffect(() => {
@@ -29,11 +33,21 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  // on click confetti
+  const fireConfetti = () => {
+    confetti({
+      particleCount: 120,
+      spread: 100,
+      origin: { y: 0.6 },
+    });
+  };
+
+  // html
   return (
     <>
       <div className='title-container'>
         <div className="title-text">
-          <div className='title'>Welcome</div>
+          <div className='title' onClick={fireConfetti}>Welcome</div>
           <div className='subtitle'>I'm Jack Kelly! Get to know a little bit more about me below.</div>
         </div>
       </div>
@@ -41,7 +55,27 @@ export default function Home() {
       <div className="main-container">
         <div className="section-container" ref={(el) => (sectionsRef.current[0] = el)}>
           <div className='header-container'>
-            <h1><b>Projects</b></h1>
+            <h1><b>Experience</b></h1>
+            <div className="exp-container">
+              <img src={tigerlinkLogo} className="exp-img" alt="TigerLink Logo"/>
+              <div className="exp-text">
+                <h2><b>Full Stack Developer, <i>TigerLink</i> (2025)</b></h2> <br/>
+                <ul className="exp-list">
+                  <li>
+                    Built a full-stack, mobile-responsive dating platform for Princeton students
+                    using Flask, PostgreSQL, HTML/CSS, JavaScript, and jQuery
+                  </li>
+                  <li>
+                    Implemented secure user authentication with session management and input
+                    sanitization, improving overall application security and reliability
+                  </li>
+                  <li>
+                    Developed a custom matching algorithm backed by SQLAlchemy queries,
+                    generating compatibility-based matches between verified users
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 

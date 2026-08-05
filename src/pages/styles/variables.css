@@ -1,0 +1,18 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Shared values used across all section stylesheets.
+   ========================================================================== */
+:root {
+  /* Colors */
+  --color-shadow: #7c3aed33;
+
+  /* Shape */
+  --radius-lg: 30px;
+
+  /* Effects */
+  --shadow-card: 0 4px 15px var(--color-shadow);
+
+  /* Transitions / Animations */
+  --transition-fade: opacity 0.8s ease-out, transform 0.8s ease-out;
+  --transition-scale: transform 0.4s;
+}

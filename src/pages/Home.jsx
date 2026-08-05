@@ -1,4 +1,10 @@
-import "./Home.css";
+import "./styles/variables.css";
+import "./styles/base.css";
+import "./styles/hero.css";
+import "./styles/experience.css";
+import "./styles/affiliations.css";
+import "./styles/socials.css";
+
 import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
 
@@ -6,6 +12,7 @@ import tigerlinkLogo from "./images/tigerlinkLogo.png";
 import princetonLogo from "./images/princetonLogo.png";
 import bnuLogo from "./images/bnuLogo.png";
 import gatesLogo from "./images/gatesLogo.png";
+import PII_Logo from "./images/PII_Logo.png";
 import aiLogo from "./images/aiLogo.jpg";
 import codeherLogo from "./images/codeherLogo.png";
 import linkedinLogo from "./images/linkedinLogo.png";
@@ -95,17 +102,22 @@ export default function Home() {
                 <div>Beijing Normal University</div>
               </div>
  
-              <div className='affil-container' ref={(el) => (sectionsRef.current[5] = el)} onClick={() => window.open('https://ai-4-all.org/', '_blank')}>
+              <div className='affil-container' ref={(el) => (sectionsRef.current[5] = el)} onClick={() => window.open('https://pii.princeton.edu/', '_blank')}>
+                <img src={PII_Logo} className='affil' alt="PII Logo"/>
+                <div>Princeton in Ishikawa</div>
+              </div>
+
+              <div className='affil-container' ref={(el) => (sectionsRef.current[6] = el)} onClick={() => window.open('https://ai-4-all.org/', '_blank')}>
                 <img src={aiLogo} className='affil' alt="AI4ALL Logo"/>
                 <div>AI4ALL</div>
               </div>
 
-              <div className='affil-container' ref={(el) => (sectionsRef.current[6] = el)} onClick={() => window.open('https://codehercompetition.org/', '_blank')}>
+              <div className='affil-container' ref={(el) => (sectionsRef.current[7] = el)} onClick={() => window.open('https://codehercompetition.org/', '_blank')}>
                 <img src={codeherLogo} className='affil-wide' alt="CodeHER Competition Logo"/>
                 <div>CodeHER Competition</div>
               </div>
 
-              <div className='affil-container' ref={(el) => (sectionsRef.current[7] = el)} onClick={() => window.open('https://www.thegatesscholarship.org/', '_blank')}>
+              <div className='affil-container' ref={(el) => (sectionsRef.current[8] = el)} onClick={() => window.open('https://www.thegatesscholarship.org/', '_blank')}>
                 <img src={gatesLogo} className='affil-wide' alt="Gates Scholarship Logo"/>
                 <div>The Gates Scholarship</div>
               </div>
@@ -114,16 +126,16 @@ export default function Home() {
         </div>
         
         <div className="section-container">
-          <div className='header-container' ref={(el) => (sectionsRef.current[8] = el)}>
+          <div className='header-container' ref={(el) => (sectionsRef.current[9] = el)}>
             <h1><b>Socials</b></h1>         
             <a href="https://www.linkedin.com/in/jack-kelly-391696259/" target="_blank" rel="noopener noreferrer">
-              <div className='social-container' ref={(el) => (sectionsRef.current[9] = el)}>
+              <div className='social-container' ref={(el) => (sectionsRef.current[10] = el)}>
                 <img src={linkedinLogo} alt="LinkedIn" className="social-logo"/>
                 <div>LinkedIn</div>
               </div>
             </a>
             <a href="https://www.instagram.com/jackmkelly519/" target="_blank" rel="noopener noreferrer">
-              <div className='social-container' ref={(el) => (sectionsRef.current[10] = el)}>
+              <div className='social-container' ref={(el) => (sectionsRef.current[11] = el)}>
                 <img src={instaLogo} alt="Instagram" className="social-logo"/>
                 <div>Instagram</div>
               </div>

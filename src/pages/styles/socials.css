@@ -1,0 +1,68 @@
+/* ==========================================================================
+   SOCIALS SECTION
+   ========================================================================== */
+.social-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    font-size: 25px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 60%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition-fade), var(--transition-scale);
+    cursor: pointer;
+}
+
+.social-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-container:hover {
+  transform: scale(1.1);
+}
+
+.social-logo {
+  width: 100px;
+  height: 100px;
+  margin: 3%;
+  margin-left: 4%;
+  margin-right: 15%;
+}
+
+/* ==========================================================================
+   RESPONSIVE — TABLET & BELOW
+   ========================================================================== */
+@media (max-width: 768px) {
+    .social-container {
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .social-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 5%;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — PHONE
+   ========================================================================== */
+@media (max-width: 480px) {
+    .social-container {
+        font-size: 16px;
+    }
+
+    .social-logo {
+        width: 50px;
+        height: 50px;
+    }
+}

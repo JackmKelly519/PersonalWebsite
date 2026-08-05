@@ -1,0 +1,100 @@
+/* ==========================================================================
+   AFFILIATIONS SECTION
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+}
+
+.affil-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 4%;
+    font-size: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 1%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition-fade), var(--transition-scale);
+    cursor: pointer;
+}
+
+.affil-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.affil-container:hover {
+  transform: scale(1.1);
+}
+
+/* Center the last item if there's an odd number of items */
+.affil-container:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+}
+
+.affil {
+    width: 100px;
+    height: 100px;
+    margin: 1%;
+    margin-left: 2%;
+}
+
+.affil-wide {
+    width: 235px;
+    height: 100px;
+    margin: 1%;
+    margin-left: 2%;
+}
+
+/* ==========================================================================
+   RESPONSIVE — TABLET & BELOW
+   ========================================================================== */
+@media (max-width: 768px) {
+    .affil-container {
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .affil-wide {
+        width: 160px;
+        height: 68px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — PHONE
+   ========================================================================== */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .affil-container:last-child:nth-child(odd) {
+        width: 100%;
+    }
+
+    .affil-container {
+        font-size: 16px;
+        gap: 3%;
+    }
+
+    .affil {
+        width: 70px;
+        height: 70px;
+    }
+
+    .affil-wide {
+        width: 130px;
+        height: 55px;
+    }
+}

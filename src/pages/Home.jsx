@@ -83,7 +83,7 @@ export default function Home() {
                     and speaker diarization 
                   </li>
                   <li>
-                    Wrote a <a href="./files/HCI_LLL.pdf" target="_blank" rel="noopener noreferrer">Human-Computer Interaction academic report</a> on
+                    Wrote a <a href="/HCI_LLL.pdf" target="_blank" rel="noopener noreferrer">Human-Computer Interaction academic report</a> on
                     the developments and final conclusions from the project
                   </li>
                 </ul>
